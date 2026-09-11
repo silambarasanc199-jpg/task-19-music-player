@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vibe — Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div>
+            <p class="mini-title">TASK 19</p>
+            <h1>Vibe<span>.</span></h1>
+        </div>
+
+        <div class="header-info">
+            MUSIC PLAYER
+        </div>
+
+    </header>
+
+
+    <!-- MAIN PLAYER -->
+    <main>
+
+        <section class="player-card">
+
+            <!-- ALBUM ART -->
+            <div class="album-area">
+
+                <div class="album-art" id="albumArt">
+
+                    <div class="art-circle"></div>
+
+                    <div class="music-symbol">
+                        ♪
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SONG DETAILS -->
+            <div class="song-details">
+
+                <p id="statusText" class="status">
+                    READY TO PLAY
+                </p>
+
+                <h2 id="songTitle">
+                    Select a song
+                </h2>
+
+                <p id="artist">
+                    Your Playlist
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-section">
+
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+            <div class="controls">
+
+                <button
+                    id="previousBtn"
+                    class="control-btn"
+                    aria-label="Previous song"
+                >
+                    ⏮
+                </button>
+
+
+                <button
+                    id="playBtn"
+                    class="play-btn"
+                    aria-label="Play"
+                >
+                    ▶
+                </button>
+
+
+                <button
+                    id="nextBtn"
+                    class="control-btn"
+                    aria-label="Next song"
+                >
+                    ⏭
+                </button>
+
+            </div>
+
+
+            <!-- VOLUME -->
+            <div class="volume-section">
+
+                <button
+                    id="muteBtn"
+                    class="mute-btn"
+                    aria-label="Mute"
+                >
+                    🔊
+                </button>
+
+                <input
+                    type="range"
+                    id="volumeBar"
+                    min="0"
+                    max="1"
+                    value="0.8"
+                    step="0.01"
+                >
+
+                <span id="volumeText">
+                    80%
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLAYLIST -->
+        <section class="playlist-section">
+
+            <div class="playlist-header">
+
+                <div>
+                    <p class="mini-title">
+                        YOUR MUSIC
+                    </p>
+
+                    <h2>
+                        Playlist
+                    </h2>
+                </div>
+
+                <span id="trackCount">
+                    0 tracks
+                </span>
+
+            </div>
+
+
+            <div id="playlist" class="playlist">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Veda Technology Internship · Task 19 · Music Player UI
+    </footer>
+
+</div>
+
+
+<!-- HTML5 AUDIO ELEMENT -->
+<audio id="audio"></audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
